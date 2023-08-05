@@ -11,8 +11,8 @@
             <resource id="Magento_Backend::admin">
                 <resource id="Magento_Backend::content">
                     <resource id="Magento_Backend::content_elements">
-                        <resource id="Kochedikov_Blog::blog" title="Blog" translate="title" sortOrder="10">
-                            <resource id="Kochedikov_Blog::post" title="Posts" translate="title" sortOrder="20" />
+                        <resource id="Kochedikov_Blog::blog" title="Kochedikov Blog" translate="title" sortOrder="10">
+                            <resource id="Kochedikov_Blog::post" title="Kochedikov Blog Posts" translate="title" sortOrder="20" />
                         </resource>
                     </resource>
                 </resource>

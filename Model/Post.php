@@ -14,6 +14,7 @@ class Post extends AbstractModel implements PostInterface
     private const CREATED_AT = 'created_at';
     private const UPDATED_AT = 'updated_at';
     private const IS_ACTIVE = 'is_active';
+    private const FEATURED_IMAGE = 'featured_image';
 
     protected function _construct()
     {
@@ -81,5 +82,10 @@ class Post extends AbstractModel implements PostInterface
     public function setIsActive($status): Post
     {
         return $this->setData(self::IS_ACTIVE, $status);
+    }
+
+    public function getFeaturedImage(): ?string
+    {
+        return $this->getData(self::FEATURED_IMAGE);
     }
 }

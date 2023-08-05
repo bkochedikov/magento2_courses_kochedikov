@@ -7,6 +7,8 @@ use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Controller\ResultInterface;
 
 class NewAction extends Action{
+    const ADMIN_RESOURCE = 'Kochedikov_Blog::post';
+
 
     public function execute(): ResultInterface
     {

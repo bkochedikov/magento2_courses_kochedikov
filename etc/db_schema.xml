@@ -12,6 +12,7 @@
                 comment="Blog Post Modification Time"/>
         <column xsi:type="smallint" name="is_active" unsigned="false" nullable="false" identity="false"
                 default="1" comment="Is Blog Post Active"/>
+        <column xsi:type="varchar" name="featured_image" nullable="true" length="255" comment="Featured image"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="post_id"/>
         </constraint>

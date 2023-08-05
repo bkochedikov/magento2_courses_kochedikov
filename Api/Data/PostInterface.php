@@ -72,4 +72,6 @@ interface PostInterface
      * @return $this
      */
     public function setIsActive(int $status);
+
+    public function getFeaturedImage(): ?string;
 }

@@ -1,0 +1,17 @@
+{
+    "name": "kochedikov/module-blog",
+    "description": "Blog module for Magento 2.",
+    "require": {
+        "php": "^8.0"
+    },
+    "type": "magento2-module",
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "Kochedikov\\Blog\\": ""
+        }
+    }
+}

@@ -19,6 +19,8 @@ use Magento\Framework\Exception\LocalizedException;
  */
 class Save extends Action implements HttpPostActionInterface
 {
+    const ADMIN_RESOURCE = 'Kochedikov_Blog::post';
+
     /**
      * @param Context $context
      * @param DataPersistorInterface $dataPersistor
@@ -61,6 +63,12 @@ class Save extends Action implements HttpPostActionInterface
                     $this->messageManager->addErrorMessage(__('This post no longer exists.'));
                     return $resultRedirect->setPath('*/*/');
                 }
+            }
+
+            if (!empty($data['featured_image'][0]['name']) && isset($data['featured_image'][0]['tmp_name'])) {
+                $data['featured_image'] = $data['featured_image'][0]['file'];
+            } else {
+                unset($data['featured_image']);
             }
 
             $model->setData($data);

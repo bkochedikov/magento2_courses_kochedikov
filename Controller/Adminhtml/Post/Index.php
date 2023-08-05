@@ -10,6 +10,7 @@ use Magento\Framework\View\Result\Page;
 
 class Index extends Action
 {
+    const ADMIN_RESOURCE = 'Kochedikov_Blog::post';
 
     public function execute(): ResultInterface
     {

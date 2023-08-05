@@ -1,0 +1,15 @@
+<?php
+/** @var Magento\Framework\View\Element\Template $block */
+/** @var Magento\Framework\Escaper $escaper */
+/** @var Kochedikov\Blog\ViewModel\Post $postVm */
+$postVm = $block->getData('post_vm');
+$post = $postVm->getDetail();
+?>
+<div class="blog-post-detail">
+    <h1><?= $escaper->escapeHtml($post->getTitle()) ?></h1>
+    <p><em><?= __('Created at: %1',$post->getCreatedAt()) ?></em></p>
+    <?php if ($post->getFeaturedImage()): ?>
+        <p><img src="<?= $escaper->escapeHtml($postVm->getFeaturedImageUrl($post)) ?>" alt="" loading="lazy"/></p>
+    <?php endif; ?>
+    <p><?= $escaper->escapeHtml($post->getContent(), ['em', 'p', 'strong']) ?></p>
+</div>

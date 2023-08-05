@@ -13,6 +13,8 @@ use Magento\Ui\Component\MassAction\Filter;
 
 class MassEnable extends Action
 {
+    const ADMIN_RESOURCE = 'Kochedikov_Blog::post';
+
     public function __construct(
         Context $context,
         private Filter $filter,

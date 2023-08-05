@@ -1,0 +1,19 @@
+{
+    "kochedikov_blog_post": {
+        "column": {
+            "post_id": true,
+            "title": true,
+            "content": true,
+            "created_at": true,
+            "updated_at": true,
+            "is_active": true,
+            "featured_image": true
+        },
+        "index": {
+            "KOCHEDIKOV_BLOG_POST_TITLE_CONTENT": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

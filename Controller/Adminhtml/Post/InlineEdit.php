@@ -11,6 +11,8 @@ use Magento\Framework\Controller\ResultInterface;
 
 class InlineEdit extends Action
 {
+    const ADMIN_RESOURCE = 'Kochedikov_Blog::post';
+
     public function __construct(
         Context                         $context,
         private PostRepositoryInterface $postRepository
